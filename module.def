@@ -1,0 +1,60 @@
+# ============================================================================
+# OpenPanel AWStats.module for website statistics hosting
+# Copyright (C) 2008 PanelSix V.O.F.
+# ============================================================================
+module AWStats				< uuid ef4e1502-43af-4e46-b309-ac603651ca19
+							< version 1.0
+							< languages en_EN
+							< apitype xml
+							
+
+# ============================================================================
+# CLASSES
+# ============================================================================
+class Vhost:AWStats			< uuid 2ea072f0-b0d1-4ffa-9bb2-fcfb2c6f4ba1
+							< version 1
+							< requires Domain:Vhost
+							< indexing manual
+							< uniquein parent
+							< singleton webstats
+							< shortname webstats
+							< title Web Statistics
+							< description Virtual host web statistics
+							
+							< capabilities create delete
+	
+	string id				: id < flags enabled
+	
+	string path				: Directory name for the statistics pages on your website.
+							< example webstats
+							< default webstats
+							< tooltip Your stats will be accessible in a sub-directory of your site. Choose its name here without leading or trailing slashes.
+
+
+
+# ============================================================================
+# AUTHD
+# ============================================================================
+authd fileops
+	match *.awstats			: /etc/%%SERVICE_HTTPD%%/openpanel.d/*
+							< user root
+							< group root
+							< perms 0644
+	
+	match *.conf			: /etc/awstats
+							< user root
+							< group root
+							< perms 0644
+	
+# ----------------------------------------------------------------------------
+authd services
+	service %%SERVICE_HTTPD%%
+
+# ============================================================================
+# DISTRO MACROS
+# ============================================================================
+distro redhat
+	macro SERVICE_HTTPD		: httpd
+
+distro debian
+	macro SERVICE_HTTPD		: apache2

@@ -1,0 +1,52 @@
+<xml.schema>
+
+  <xml.class name="openpanel.module.awstats">
+	<xml.type>dict</xml.type>
+	<xml.proplist>
+	  <xml.member class="config"	id="config"/>
+	</xml.proplist>
+  </xml.class>
+
+  <xml.class name="config">
+	<xml.type>dict</xml.type>
+	<xml.proplist>
+	  <xml.member class="apache:vhostconfdir" id="apache:vhostconfdir"/>
+	  <xml.member class="apache:accesslog"    id="apache:accesslog"/>
+	  <xml.member class="apache:servicename"  id="apache:servicename"/>
+	  <xml.member class="awstats:confdir"     id="awstats:confdir"/>
+	  <xml.member class="awstats:crondir" 	  id="awstats:crondir"/>
+	  <xml.member class="local:staging"		  id="local:staging"/>
+	  <xml.member class="local:templatedir"	  id="local:templatedir"/>
+	</xml.proplist>
+  </xml.class>
+  
+  <xml.class name="apache:vhostconfdir">
+	<xml.type>string</xml.type>
+  </xml.class>
+
+  <xml.class name="awstats:confdir">
+	<xml.type>string</xml.type>
+  </xml.class>
+
+  <xml.class name="awstats:crondir">
+	<xml.type>string</xml.type>
+  </xml.class>
+
+  <xml.class name="local:staging">
+	<xml.type>string</xml.type>
+  </xml.class>
+
+  <xml.class name="local:templatedir">
+	<xml.type>string</xml.type>
+  </xml.class>
+
+  <xml.class name="apache:accesslog">
+	<xml.type>string</xml.type>
+  </xml.class>
+  
+  <xml.class name="apache:servicename">
+	<xml.type>string</xml.type>
+  </xml.class>
+
+  
+</xml.schema>

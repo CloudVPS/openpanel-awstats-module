@@ -1,0 +1,5 @@
+#!/bin/bash
+ls -1 /etc/awstats | while read file; do
+	realfile=`echo "$file" | sed -e "s/\.conf$//"
+	su - www-data -c "/usr/bin/perl /var/www/awstats/awstats.pl -update -config=$realfile"
+done

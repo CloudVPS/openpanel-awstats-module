@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openpanel.module.awstats>
+	<config>
+		<apache:vhostconfdir>/etc/httpd/openpanel.d</apache:vhostconfdir>
+		<apache:accesslog>/var/log/httpd/access.log</apache:accesslog>
+		<apache:servicename>httpd</apache:servicename>
+		<awstats:confdir>/etc/awstats</awstats:confdir>
+		<awstats:crondir>./</awstats:crondir>
+		<local:staging>/var/opencore/conf/staging/AWStats/</local:staging>
+		<local:templatedir>./</local:templatedir>
+	</config>
+</openpanel.module.awstats>
