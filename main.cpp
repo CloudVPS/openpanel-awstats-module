@@ -122,7 +122,7 @@ bool awstatsmodule::writeconfiguration (const value &v)
 #ifdef __FLAVOR_LINUX_REDHAT
 	string logfile = "/var/log/httpd/openpanel/logs/%s.log" %format (hostname);
 #else
-	string logfile = "/var/log/apache/openpanel/logs/%s.log" %format (hostname);
+	string logfile = "/var/log/apache2/openpanel/logs/%s.log" %format (hostname);
 #endif
 	acfg.setlogfile (logfile);
 	acfg.seturi	(v["Vhost:AWStats"]["path"]);

@@ -99,7 +99,9 @@ bool cfgawstats::writevhostconfif (void)
 	f.printf ("Alias /awstats-icon/ \"/usr/share/awstats/icon/\"\n");
 	f.printf ("Alias /awstatscss \"/usr/share/doc/awstats/examples/css\"\n");
 	f.printf ("ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/\n");
-	f.printf ("ScriptAlias /%s/ /usr/share/awstats/\n", _uri.str());
+    // f.printf ("ScriptAlias /%s/ /usr/share/awstats/\n", _uri.str());
+    f.printf ("RewriteEngine On\n");
+    f.printf ("RewriteRule /%s/ /cgi-bin/awstats.pl [R]\n", _uri.str());
 	f.printf ("Options ExecCGI -MultiViews +SymLinksIfOwnerMatch\n");
 #else
   #ifdef __FLAVOR_LINUX_REDHAT
