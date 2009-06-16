@@ -23,6 +23,7 @@ class Vhost:AWStats			< uuid 2ea072f0-b0d1-4ffa-9bb2-fcfb2c6f4ba1
 							< shortname webstats
 							< title Web Statistics
 							< description Virtual host web statistics
+							< emptytext Web Statistics for this website have not been configured.
 							
 							< capabilities create delete
 	
