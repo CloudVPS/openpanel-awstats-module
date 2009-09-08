@@ -1,0 +1,12 @@
+Source: openpanel-mod-awstats
+Section: misc
+Priority: optional
+Maintainer: OpenPanel/Panel6 packager <packages@panelsix.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: openpanel-mod-awstats
+Architecture: any
+Depends: , openpanel-core (>= 0.8.3), openpanel-mod-apache2, awstats
+Description: Configure awstats per (sub) domain 
+ Openpanel awstats management module
