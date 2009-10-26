@@ -17,7 +17,7 @@ module.xml: module.def
 
 awstatsmodule.exe: $(OBJ)
 	$(LD) $(LDFLAGS) -o awstatsmodule.exe $(OBJ) \
-	../opencore/api/c++/lib/libcoremodule.a $(LIBS) -lz -lssl
+	/usr/lib/opencore/libcoremodule.a $(LIBS) -lz -lssl
 
 clean:
 	rm -f *.o *.exe module.xml
@@ -26,4 +26,4 @@ clean:
 
 SUFFIXES: .cpp .o
 .cpp.o:
-	$(CXX) $(CXXFLAGS) $(INCLUDES) -I../opencore/api/c++/include -c -g $<
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -I/usr/include/opencore -c -g $<
