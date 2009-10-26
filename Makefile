@@ -4,10 +4,10 @@ OBJ	= main.o cfgawstats.o version.o
 
 all: awstatsmodule.exe module.xml
 	./addflavor.sh
-	mkapp awstatsmodule 
+	grace mkapp awstatsmodule 
 
 version.cpp:
-	mkversion version.cpp
+	grace mkversion version.cpp
 
 module.xml: module.def
 	mkmodulexml < module.def > module.xml
