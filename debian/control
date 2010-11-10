@@ -7,6 +7,6 @@ Standards-Version: 3.7.2
 
 Package: openpanel-mod-awstats
 Architecture: any
-Depends: openpanel-core (>= 0.8.3), openpanel-mod-apache2, awstats
+Depends: openpanel-core (>= 0.8.3), openpanel-mod-apache2, awstats, ${shlibs:Depends}
 Description: OpenPanel module to configure awstats per (sub) domain 
  Openpanel awstats management module

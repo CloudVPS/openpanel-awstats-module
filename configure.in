@@ -2,6 +2,4 @@ cxx
 grace
 pthread
 libsocket
-libdl
-libcrypt
 unixflavor
