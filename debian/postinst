@@ -28,10 +28,11 @@ set -e
 
 case "$1" in
     configure)
-ln -sf awstatsmodule.app/exec /var/opencore/modules/AWStats.module/action
-mkdir -p /var/opencore/conf/staging/AWStats
-chown opencore:authd /var/opencore/conf/staging/AWStats
+        ln -sf awstatsmodule.app/exec /var/opencore/modules/AWStats.module/action
+        mkdir -p /var/opencore/conf/staging/AWStats
+        chown opencore:authd /var/opencore/conf/staging/AWStats
 
+        invoke-rc.d openpanel-core reload
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
