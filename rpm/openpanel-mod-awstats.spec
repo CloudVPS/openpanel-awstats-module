@@ -43,16 +43,16 @@ make
 %install
 BUILD_ROOT=$RPM_BUILD_ROOT
 rm -rf ${BUILD_ROOT}
-mkdir -p ${BUILD_ROOT}/var/opencore/modules/AWStats.module
-cp -rf ./awstatsmodule.app ${BUILD_ROOT}/var/opencore/modules/AWStats.module/
-cp module.xml ${BUILD_ROOT}/var/opencore/modules/AWStats.module/module.xml
-install -m 755 verify ${BUILD_ROOT}/var/opencore/modules/AWStats.module/verify
+mkdir -p ${BUILD_ROOT}/var/openpanel/modules/AWStats.module
+cp -rf ./awstatsmodule.app ${BUILD_ROOT}/var/openpanel/modules/AWStats.module/
+cp module.xml ${BUILD_ROOT}/var/openpanel/modules/AWStats.module/module.xml
+install -m 755 verify ${BUILD_ROOT}/var/openpanel/modules/AWStats.module/verify
 mkdir -p ${BUILD_ROOT}/etc/awstats
 
 %post
-ln -sf awstatsmodule.app/exec /var/opencore/modules/AWStats.module/action
-mkdir -p /var/opencore/conf/staging/AWStats
-chown opencore:authd /var/opencore/conf/staging/AWStats
+ln -sf awstatsmodule.app/exec /var/openpanel/modules/AWStats.module/action
+mkdir -p /var/openpanel/conf/staging/AWStats
+chown openpanel-core:openpanel-authd /var/openpanel/conf/staging/AWStats
 
 %files
 %defattr(-,root,root)

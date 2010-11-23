@@ -16,7 +16,7 @@
 		<apache:servicename>apache2</apache:servicename>
 		<awstats:confdir>/etc/awstats</awstats:confdir>
 		<awstats:crondir>./</awstats:crondir>
-		<local:staging>/var/opencore/conf/staging/AWStats/</local:staging>
+		<local:staging>/var/openpanel/conf/staging/AWStats/</local:staging>
 		<local:templatedir>./</local:templatedir>
 	</config>
 </openpanel.module.awstats>

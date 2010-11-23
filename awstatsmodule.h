@@ -10,7 +10,7 @@
 #ifndef _awstatsmodule_H
 #define _awstatsmodule_H 1
 
-#include <moduleapp.h>
+#include <openpanel-core/moduleapp.h>
 #include <grace/system.h>
 #include <grace/configdb.h>
 

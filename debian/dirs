@@ -1,1 +1,1 @@
-var/opencore/modules/AWStats.module
+var/openpanel/modules/AWStats.module

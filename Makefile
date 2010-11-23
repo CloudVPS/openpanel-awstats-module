@@ -25,7 +25,7 @@ module.xml: module.def
 
 awstatsmodule.exe: $(OBJ)
 	$(LD) $(LDFLAGS) -o awstatsmodule.exe $(OBJ) \
-	/usr/lib/opencore/libcoremodule.a $(LIBS)
+	/usr/lib/openpanel-core/libcoremodule.a $(LIBS)
 
 clean:
 	rm -f *.o *.exe module.xml

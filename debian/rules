@@ -20,9 +20,9 @@ install-stamp: build-stamp
 	dh_testdir
 	dh_testroot
 	dh_installdirs
-	cp -rf ./awstatsmodule.app debian/openpanel-mod-awstats/var/opencore/modules/AWStats.module/
-	cp module.xml debian/openpanel-mod-awstats/var/opencore/modules/AWStats.module/module.xml
-	install -m 755 verify debian/openpanel-mod-awstats/var/opencore/modules/AWStats.module/verify
+	cp -rf ./awstatsmodule.app debian/openpanel-mod-awstats/var/openpanel/modules/AWStats.module/
+	cp module.xml debian/openpanel-mod-awstats/var/openpanel/modules/AWStats.module/module.xml
+	install -m 755 verify debian/openpanel-mod-awstats/var/openpanel/modules/AWStats.module/verify
 
 binary-indep: build install
 
